@@ -9,8 +9,10 @@
     ])
     .config(function($stateProvider,
       $urlRouterProvider,
-      $locationProvider){
-
+      $locationProvider,
+      $sceProvider
+  ){
+        $sceProvider.enabled(false);
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
