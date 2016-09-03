@@ -15,7 +15,8 @@
           userName: userName,
           password: password
         },
-        url: 'http://localhost:3000/auth/signup'
+        // url: 'http://localhost:3000/auth/signup'
+        url: 'https://bomb-video-server.herokuapp.com/auth/signup'
       }).then(function successCallback(response) {
           console.log(response);
           loginService.loginUser(userName, password);

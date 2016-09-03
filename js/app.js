@@ -20,7 +20,9 @@
           })
           .state('myPage',{
             url: '/myPage',
-            templateUrl: '/templates/myPage.html'
+            templateUrl: '/templates/myPage.html',
+            controller: 'myPageController'
+
           });
 
 
