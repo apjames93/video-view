@@ -4,7 +4,8 @@
     .module('video', [
       'ui.router',
       'video.login',
-      'video.signup'
+      'video.signup',
+      'video.youtube'
     ])
     .config(function($stateProvider,
       $urlRouterProvider,
@@ -16,7 +17,12 @@
           .state('home',{
             url: '/',
             templateUrl: '/templates/home.html'
+          })
+          .state('myPage',{
+            url: '/myPage',
+            templateUrl: '/templates/myPage.html'
           });
+
 
       });
 
