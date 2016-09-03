@@ -30,11 +30,6 @@
         $http({
             url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&type=34%2CComedy&key=AIzaSyAlCuRiOYDzcxZrJZ2hufn-UREkhr4W2Qc'
         }).then(function successCallback(response) {
-          console.log(response.data.items.length);
-
-
-
-
           deferred.resolve(response);
         }, function errorCallback(err) {
           deferred.reject(err);

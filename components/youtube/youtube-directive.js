@@ -16,8 +16,10 @@
 
         return directive;
     }
+
     youtubeController.$inject = ['$scope',  'youtubeService'];
     function youtubeController($scope,youtubeService) {
+
       _init = function() {
         _getyouTubeVideo();
       };
@@ -33,7 +35,6 @@
           return $scope.youtubeVideo;
         });
       };
-
       _init();
     }
 

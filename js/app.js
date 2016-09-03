@@ -5,7 +5,8 @@
       'ui.router',
       'video.login',
       'video.signup',
-      'video.youtube'
+      'video.youtube',
+      'video.reaction'
     ])
     .config(function($stateProvider,
       $urlRouterProvider,
