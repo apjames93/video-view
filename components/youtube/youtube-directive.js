@@ -17,17 +17,26 @@
         return directive;
     }
 
-    youtubeController.$inject = ['$scope',  'youtubeService'];
-    function youtubeController($scope,youtubeService) {
+    youtubeController.$inject = ['$scope', 'youtubeService', 'loginService'];
+    function youtubeController($scope, youtubeService, loginService) {
+
+
 
       _init = function() {
         _getyouTubeVideo();
+        _getUserId();
       };
+
+      _getUserId = function(){
+        $scope.userid= loginService.getUserId();
+      };
+
       var randomId;
       _getRandomvideo= function(min, max) {
         randomId = (Math.floor(Math.random() * (max - min + 1)) + min);
         return randomId;
     };
+
       _getyouTubeVideo = function(){
         youtubeService.getYouTube().then(function(response){
         _getRandomvideo(0, response.data.items.length);
@@ -35,6 +44,13 @@
           return $scope.youtubeVideo;
         });
       };
+
+      $scope.addVideo = function(youtube){
+        // console.log(youtube);
+        youtubeService.addVideo(youtube);
+      };
+
+
       _init();
     }
 

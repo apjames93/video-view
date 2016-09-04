@@ -1,1 +1,10 @@
 <iframe width="auto" height="100%" src={{youtubeVideo}} frameborder="0" allowfullscreen></iframe>
+
+<p>
+  <form ng-submit='addVideo(youtubeVideo)'>
+          <input ng-model='youtubeVideo' type="hidden" class="validate">
+          <input type="hidden" ng-model='reaction' type="hidden" class="validate">
+          <button type="submit" name="button">add this video</button>
+
+  </form>
+</p>
