@@ -2,13 +2,19 @@
   angular
     .module('video.youtube.youtube-service', [])
     .service('youtubeService', youtubeService);
-    youtubeService.$inject = ['$http', '$q', 'loginService', '$state'];
-    function youtubeService($http, $q, loginService, $state){
+    youtubeService.$inject = ['$http', '$q', 'loginService', '$location', '$state'];
+    function youtubeService($http, $q, loginService, $location, $state){
 
       return {
         getYouTube : getYouTube,
-        addVideo: addVideo
+        addVideo: addVideo,
+        dontLikeThat: dontLikeThat
       };
+
+      function dontLikeThat(){
+        console.log('hit');
+        $state.go($state.$current, null, { reload: true });
+      }
 
       function getYouTube(){
         var deferred = $q.defer();
@@ -23,7 +29,6 @@
       }
 
       function addVideo(youtube){
-        console.log('service', youtube);
         var deferred = $q.defer();
         $http({
           method: 'post',
@@ -37,8 +42,7 @@
           // url: 'https://bomb-video-server.herokuapp.com/api/video/'
           url: 'http://localhost:3000/api/video/'
         }).then(function successCallback(response) {
-          console.log(loginService.getUserId());
-          console.log(response);
+          $location.path('/myVideos');
           deferred.resolve(response);
         }, function errorCallback(err) {
           deferred.reject(err);

@@ -8,7 +8,7 @@
           restrict: 'E',
           templateUrl: '/templates/youtube.html',
           scope: {
-            youtubeItem: '='
+            youtube: '='
           },
           controller: youtubeController,
           controllerAs: 'youtubeController'
@@ -43,6 +43,10 @@
           $scope.youtubeVideo = "https://www.youtube.com/embed/"+ response.data.items[randomId].id.videoId;
           return $scope.youtubeVideo;
         });
+      };
+
+      $scope.newVideo = function(){
+        youtubeService.dontLikeThat();
       };
 
       $scope.addVideo = function(youtube){

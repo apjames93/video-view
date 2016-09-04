@@ -1,5 +1,5 @@
 <!-- <page-nav></page-nav> -->
-<div class="col s12">
+<!-- <div class="col s12"> -->
   <nav class="row">
     <div class="nav-wrapper blue">
       <h6> Hello {{userName}}</h6>
@@ -9,4 +9,7 @@
       </ul>
     </div>
   </nav>
-</div>
+
+  <div ng-repeat='video in myvideo'>
+        <myvideos video="video"></myvideos>
+  </div>

@@ -7,6 +7,8 @@
       'video.signup',
       'video.youtube',
       'video.reaction',
+      'video.myvideos',,
+
       // 'video.pagenav'
     ])
     .config(function($stateProvider,
@@ -29,8 +31,8 @@
           })
           .state('myVideo',{
             url: '/myVideos',
-            templateUrl: '/templates/myVideo.html'
-            // controller: 'myPageController'
+            templateUrl: '/templates/myVideo.html',
+            controller: 'myPageController'
 
           });
 

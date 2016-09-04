@@ -35,7 +35,6 @@
           // url: 'https://bomb-video-server.herokuapp.com/auth/login'
         }).then(function successCallback(response) {
             _setUserData(response.data);
-            console.log(user);
             $location.path('/myPage');
           }, function errorCallback(err) {
             console.log('login err', err);
