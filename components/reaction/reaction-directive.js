@@ -19,7 +19,7 @@
     reactionController.$inject = ['$scope',  'reactionService'];
     function reactionController($scope,reactionService) {
       _init = function() {
-        window.onload()
+        window.onload();
       };
         window.onload = function() {
           navigator.getUserMedia = navigator.getUserMedia ||

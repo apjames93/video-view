@@ -2,5 +2,5 @@
 
 angular
   .module('video.pagenav',[
-  // 'video.pageNav.pageNav-directive'
+  'video.pagenav.pagenav-directive'
 ]);

@@ -7,9 +7,8 @@
       'video.signup',
       'video.youtube',
       'video.reaction',
-      'video.myvideos',,
-
-      // 'video.pagenav'
+      'video.myvideos',
+      'video.pagenav'
     ])
     .config(function($stateProvider,
       $urlRouterProvider,

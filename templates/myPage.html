@@ -1,18 +1,9 @@
 <div class="row">
-   <div class="col s12">
-     <nav class="row">
-       <div class="nav-wrapper blue">
-         <h6> Hello {{userName}}</h6>
-         <ul id="nav-mobile" class="right">
-           <li><a ui-sref="myPage">home</a></li>
-           <li><a ui-sref="myVideo">My Videos</a></li>
-         </ul>
-       </div>
-     </nav>
+   <pagenav></pagenav>
+   <div class="col s12 m6">
+     <youtube></youtube>
    </div>
-   <!-- <page-nav><page-nav> -->
-   <div class="col s12 m6"><youtube></youtube>
-   </div>
-   <div class="col s12 m6"><reaction></reaction>
+   <div class="col s12 m6">
+     <reaction></reaction>
    </div>
  </div>

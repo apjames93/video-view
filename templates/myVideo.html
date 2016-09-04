@@ -1,15 +1,6 @@
-<!-- <page-nav></page-nav> -->
-<!-- <div class="col s12"> -->
-  <nav class="row">
-    <div class="nav-wrapper blue">
-      <h6> Hello {{userName}}</h6>
-      <ul id="nav-mobile" class="right">
-        <li><a ui-sref="myPage">home</a></li>
-        <li><a ui-sref="myVideo">My Videos</a></li>
-      </ul>
+<div class="row">
+  <pagenav></pagenav>
+    <div ng-repeat='video in myvideo'>
+      <myvideos class="col s12 m6" video="video"></myvideos>
     </div>
-  </nav>
-
-  <div ng-repeat='video in myvideo'>
-        <myvideos video="video"></myvideos>
-  </div>
+</div>

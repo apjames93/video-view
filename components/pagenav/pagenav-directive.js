@@ -7,11 +7,6 @@
         var directive = {
           restrict: 'E',
           templateUrl: '/templates/pagenav.html',
-          scope: {
-            pagenavItem: '='
-          }
-          // controller: myPageController,
-          // controllerAs: 'myPageController'
         };
         return directive;
     }
