@@ -9,7 +9,8 @@
       return {
         getToken: getToken,
         getUserId : getUserId,
-        loginUser: loginUser
+        loginUser: loginUser,
+        getUserName : getUserName
       };
       function _setUserData(data) {
         user = data;
@@ -19,6 +20,9 @@
       }
       function getUserId(){
         return user.userId;
+      }
+      function getUserName(){
+        return user.userName;
       }
       function loginUser(userName, password) {
         $http({
