@@ -25,6 +25,11 @@
             url: '/myPage',
             templateUrl: '/templates/myPage.html',
             controller: 'myPageController'
+          })
+          .state('myVideo',{
+            url: '/myVideos',
+            templateUrl: '/templates/myVideo.html'
+            // controller: 'myPageController'
 
           });
 
