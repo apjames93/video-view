@@ -15,7 +15,6 @@
       };
       _getMyVideos = function(){
         myvideosService.getVideo().then(function(data){
-          console.log('controller data @@##@@#@',data);
           $scope.myvideo= data;
         });
       };

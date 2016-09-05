@@ -24,7 +24,7 @@
 
       _init = function() {
         _getyouTubeVideo();
-        _getUserId();
+        _getUserId(); 
       };
 
       _getUserId = function(){
