@@ -23,9 +23,12 @@
 
 
       _init = function() {
+        $scope.hideForm = true;
         _getUserId();
         _getMyVideos();
       };
+
+        $scope.hideForm = true;
 
       _getUserId = function(){
         $scope.userid= loginService.getUserId();
@@ -39,6 +42,17 @@
 
       $scope.delVideo = function(videoid){
         myvideosService.getOutOfHere(videoid);
+      };
+
+      $scope.sendEmail = function(to, subject, text){
+        myvideosService.sendEmail(to, subject, text);
+        $scope.hideForm = true;
+        $scope.to ='';
+        $scope.subject ='';
+      }
+
+      $scope.showForm = function() {
+        $scope.hideForm = false;
       };
 
 

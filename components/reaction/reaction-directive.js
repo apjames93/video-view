@@ -32,7 +32,7 @@
           var video = document.querySelector('video');
 
           function successCallback(stream) {
-            window.stream = stream; // stream available to console
+            window.stream = stream;
             if (window.URL) {
               video.src = window.URL.createObjectURL(stream);
             } else {
@@ -43,12 +43,10 @@
           function errorCallback(error) {
             console.log('navigator.getUserMedia error: ', error);
           }
-
           navigator.getUserMedia(constraints, successCallback, errorCallback);
         };
 
       _init();
-
+      
     }
-
 })();

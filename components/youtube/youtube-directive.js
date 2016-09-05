@@ -20,11 +20,9 @@
     youtubeController.$inject = ['$scope', 'youtubeService', 'loginService'];
     function youtubeController($scope, youtubeService, loginService) {
 
-
-
       _init = function() {
         _getyouTubeVideo();
-        _getUserId(); 
+        _getUserId();
       };
 
       _getUserId = function(){
@@ -50,7 +48,6 @@
       };
 
       $scope.addVideo = function(youtube){
-        // console.log(youtube);
         youtubeService.addVideo(youtube);
       };
 
