@@ -21,8 +21,8 @@
           params: {
             users_id: loginService.getUserId(),
           },
-          // url: 'https://bomb-video-server.herokuapp.com/api/video/' + loginService.getUserId()
-          url: 'http://localhost:3000/api/video/' + loginService.getUserId()
+          url: 'https://bomb-video-server.herokuapp.com/api/video/' + loginService.getUserId()
+          // url: 'http://localhost:3000/api/video/' + loginService.getUserId()
         }).then(function successCallback(response) {
           deferred.resolve(response.data.user);
         }, function errorCallback(err) {
@@ -44,8 +44,8 @@
             video_id: videoId
 
           },
-          // url: 'https://bomb-video-server.herokuapp.com/api/video/' + loginService.getUserId()
-          url: 'http://localhost:3000/api/video/' + loginService.getUserId()
+          url: 'https://bomb-video-server.herokuapp.com/api/video/' + loginService.getUserId()
+          // url: 'http://localhost:3000/api/video/' + loginService.getUserId()
         }).then(function successCallback(response) {
 
           deferred.resolve(response);
@@ -71,8 +71,8 @@
             text: text
 
           },
-          // url: 'https://bomb-video-server.herokuapp.com/api/video/email'
-          url: 'http://localhost:3000/api/video/email'
+          url: 'https://bomb-video-server.herokuapp.com/api/video/email'
+          // url: 'http://localhost:3000/api/video/email'
         }).then(function successCallback(response) {
           deferred.resolve(response);
         }, function errorCallback(err) {

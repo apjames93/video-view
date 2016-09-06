@@ -40,8 +40,8 @@
             users_id: loginService.getUserId(),
             youtube: youtube
           },
-          // url: 'https://bomb-video-server.herokuapp.com/api/video/'
-          url: 'http://localhost:3000/api/video/'
+          url: 'https://bomb-video-server.herokuapp.com/api/video/'
+          // url: 'http://localhost:3000/api/video/'
         }).then(function successCallback(response) {
           $location.path('/myVideos');
           deferred.resolve(response);

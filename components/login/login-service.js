@@ -37,8 +37,8 @@
           userName: userName,
           password: password
         },
-          url: 'http://localhost:3000/auth/login'
-          // url: 'https://bomb-video-server.herokuapp.com/auth/login'
+          // url: 'http://localhost:3000/auth/login'
+          url: 'https://bomb-video-server.herokuapp.com/auth/login'
         })
         .then(function successCallback(response) {
           _setUserData(response.data);
