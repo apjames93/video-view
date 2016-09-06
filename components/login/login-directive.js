@@ -1,4 +1,5 @@
 (function(){
+
   angular
     .module('video.login.login-directive', [])
     .directive('login', login);
@@ -13,7 +14,9 @@
     };
     return directive;
   }
+
   loginController.$inject = ['loginService'];
+
   function loginController(loginService) {
     this.submit = function(userName, password) {
       loginService.loginUser(userName, password);

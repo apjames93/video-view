@@ -3,32 +3,27 @@
     .module('video.myvideos.myvideos-directive', [])
     .directive('myvideos', myvideos);
 
-    function myvideos(){
-        var directive = {
-          restrict: 'E',
-          templateUrl: '/templates/myvideos.html',
-          scope: {
-            video: '='
-          },
-          controller: myvideosController,
-          controllerAs: 'myvideosController'
-        };
-
-        return directive;
+    function myvideos() {
+      var directive = {
+        restrict: 'E',
+        templateUrl: '/templates/myvideos.html',
+        scope: {
+          video: '='
+        },
+        controller: myvideosController,
+        controllerAs: 'myvideosController'
+      };
+      return directive;
     }
 
     myvideosController.$inject = ['$scope', 'myvideosService', 'loginService'];
     function myvideosController($scope, myvideosService, loginService) {
-
-
 
       _init = function() {
         $scope.hideForm = true;
         _getUserId();
         _getMyVideos();
       };
-
-        $scope.hideForm = true;
 
       _getUserId = function(){
         $scope.userid= loginService.getUserId();
@@ -49,15 +44,16 @@
         $scope.hideForm = true;
         $scope.to ='';
         $scope.subject ='';
-      }
+      };
 
       $scope.showForm = function() {
         $scope.hideForm = false;
       };
 
-
+      $scope.nevermind = function(){
+        $scope.hideForm = true;
+      };
 
       _init();
     }
-
 })();

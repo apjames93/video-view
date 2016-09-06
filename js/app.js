@@ -14,28 +14,26 @@
       $urlRouterProvider,
       $locationProvider,
       $sceProvider
-  ){
-        $sceProvider.enabled(false);
-        $urlRouterProvider.otherwise('/');
+    ){
+    $sceProvider.enabled(false);
+    $urlRouterProvider.otherwise('/');
 
-        $stateProvider
-          .state('home',{
-            url: '/',
-            templateUrl: '/templates/home.html'
-          })
-          .state('myPage',{
-            url: '/myPage',
-            templateUrl: '/templates/myPage.html',
-            controller: 'myPageController'
-          })
-          .state('myVideo',{
-            url: '/myVideos',
-            templateUrl: '/templates/myVideo.html',
-            controller: 'myPageController'
-
-          });
-
+    $stateProvider
+      .state('home',{
+        url: '/',
+        templateUrl: '/templates/home.html'
+      })
+      .state('myPage',{
+        url: '/myPage',
+        templateUrl: '/templates/myPage.html',
+        controller: 'myPageController'
+      })
+      .state('myVideo',{
+        url: '/myVideos',
+        templateUrl: '/templates/myVideo.html',
+        controller: 'myPageController'
 
       });
+    });
 
 })();

@@ -1,14 +1,16 @@
 <iframe width="100%" height="100%" src={{video.youtube}} frameborder="0" allowfullscreen></iframe>
 <button type="button" ng-click="delVideo(video.id)">delete</button>
 
-
 <button ng-click="showForm()">Send Video to a friend</button>
 
 <form ng-hide="hideForm" ng-submit='sendEmail(to, subject, video.youtube)'>
-   <label for="to">to:</label>
-    <input ng-model='to' type="text" class="validate">
-    <label for="subject">subject:</label>
-    <input ng-model='subject' type="text" class="validate">
+  <label for="to">to:</label>
+  <input ng-model='to' type="text" class="validate">
 
-    <button type ='submit' name="button">Send Email</button>
+  <label for="subject">subject:</label>
+  <input ng-model='subject' type="text" class="validate">
+
+  <button type ='submit' name="button">Send Email</button>
+
+  <button ng-click='nevermind()' type ='button' name="button">nevermind</button>
 </form>

@@ -4,10 +4,10 @@
     .directive('pagenav', pagenav);
 
     function pagenav(){
-        var directive = {
-          restrict: 'E',
-          templateUrl: '/templates/pagenav.html',
-        };
-        return directive;
+      var directive = {
+        restrict: 'E',
+        templateUrl: '/templates/pagenav.html',
+      };
+      return directive;
     }
 })();

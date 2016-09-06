@@ -2,7 +2,9 @@
   angular
     .module('video')
     .controller('myPageController', myPageController);
-  myPageController.$inject = ['$scope', 'loginService', 'myvideosService'];
+
+    myPageController.$inject = ['$scope', 'loginService', 'myvideosService'];
+  
     function myPageController($scope, loginService, myvideosService) {
       _init = function() {
         _getUserName();

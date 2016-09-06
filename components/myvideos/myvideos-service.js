@@ -59,7 +59,6 @@
 
 
       function sendEmail(to, subject, text){
-        console.log(to, subject, text);
         var deferred = $q.defer();
         $http({
           method: 'post',
@@ -75,7 +74,6 @@
           // url: 'https://bomb-video-server.herokuapp.com/api/video/email'
           url: 'http://localhost:3000/api/video/email'
         }).then(function successCallback(response) {
-            console.log(response);
           deferred.resolve(response);
         }, function errorCallback(err) {
 
@@ -83,13 +81,5 @@
         });
           return deferred.promise;
       }
-
-
-
-
-
-
-
-
     }
 })();

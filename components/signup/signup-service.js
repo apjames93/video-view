@@ -1,12 +1,15 @@
 (function(){
   angular
-  .module('video.signup.signup-service', [])
-  .service('signupService', signupService);
-  signupService.$inject = ['$http', 'loginService'];
-  function signupService($http, loginService){
-    return {
-      createUser: createUser
-    };
+    .module('video.signup.signup-service', [])
+    .service('signupService', signupService);
+
+    signupService.$inject = ['$http', 'loginService'];
+
+    function signupService($http, loginService){
+      return {
+        createUser: createUser
+      };
+
     function createUser(userName, password) {
       console.log('hello', userName, password);
       $http({
@@ -23,7 +26,7 @@
         }, function errorCallback(err) {
           console.log('createUser err', err);
         });
+      }
     }
-  }
 
 })();
