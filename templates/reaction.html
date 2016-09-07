@@ -1,6 +1,21 @@
 
-<div id="video-container">
-  <video class='iframe' autoplay></video>
+<div id="content">
+  <div id="container">
+    <video id="videoel" width="400" height="300" preload="auto" loop>
+    </video>
+    <canvas id="overlay" width="400" height="300"></canvas>
+  </div>
+  <canvas id="sketch" width="400" height="300"></canvas>
+  <div id="emotion_container">
+    <div id="emotion_icons">
+      <img class="emotion_icon" id="icon1" src="clmtracker/examples/media/icon_angry.png">
+      <img class="emotion_icon" id="icon2" src="clmtracker/examples/media/icon_sad.png">
+      <img class="emotion_icon" id="icon3" src="clmtracker/examples/media/icon_surprised.png">
+      <img class="emotion_icon" id="icon4" src="clmtracker/examples/media/icon_happy.png">
+    </div>
+    <div id='emotion_chart'></div>
+  </div>
+  <div id="controls">
+    <input class="btn" type="hidden" value="wait, loading video" disabled="disabled" ng-init="startVideo()" id="startbutton"></input>
+  </div>
 </div>
-
-<video id="v"></video>

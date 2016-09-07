@@ -6,12 +6,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="/css/style.css" media="screen" charset="utf-8">
+    <script>
+      // getUserMedia only works over https in Chrome 47+, so we redirect to https. Also notify user if running from file.
+      if (window.location.protocol == "file:") {
+        alert("You seem to be running this example directly from a file. Note that these examples only work when served from a server or localhost due to canvas cross-domain restrictions.");
+      } else if (window.location.hostname !== "localhost" && window.location.protocol !== "https:"){
+        window.location.protocol = "https";
+      }
+    </script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32642923-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
     <base href="/">
   </head>
 
   <body>
     <div ui-view></div>
+
+    <!-- face <script -->
+
+
+
+
+
+
+
+
 
     <!--Scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
@@ -42,5 +74,36 @@
     <script type="text/javascript" src="/components/myvideos/myvideos.js"></script>
     <script type="text/javascript" src="/components/myvideos/myvideos-directive.js"></script>
     <script type="text/javascript" src="/components/myvideos/myvideos-service.js"></script>
+
+    <!-- face -->
+    <script src="/clmtracker/jsface/utils.js"></script>
+<script src="/clmtracker/jsface/clmtrackr.js"></script>
+<script src="/clmtracker/models/model_pac_20_svm_emotionDetection.js"></script>
+<script src="/clmtracker/jsface/Stats.js"></script>
+<script src="clmtracker/examples/js/d3.min.js"></script>
+<script src="clmtracker/examples/js/emotion_classifier.js"></script>
+<script src="clmtracker/examples/js/emotionmodel.js"></script>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 </html>
