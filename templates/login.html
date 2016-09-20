@@ -1,12 +1,14 @@
+
+
 <div class="row">
   <h4>login</h4>
-  <form class="col s6" ng-submit='loginController.submit(userName, password)'>
+  <form class="col s7" ng-submit='loginController.submit(userName, password)'>
     <div class="row">
-      <div class="input-field col s6">
+      <div class="input-field col s12">
         <input id="user_name" placeholder="User Name" ng-model='userName'type="text" class="validate">
       </div>
     <div class="row">
-      <div class="input-field col s6">
+      <div class="input-field col s12">
         <input id="password" placeholder="Password" ng-model='password'type="password" class="validate">
       </div>
     </div>
@@ -14,20 +16,19 @@
     </button>
   </form>
 </div>
-</div>
 
-<div class="row">
-  <form class="col s6" ng-submit='loginController.submit(guest, guestpass)'>
-    <div class="row">
-      <div class="input-field col s6">
-        <input id="user_name" placeholder="User Name" ng-model='guest' ng-init="guest='guest'" type="hidden" class="validate">
-      </div>
-    <div class="row">
-      <div class="input-field col s6">
-        <input id="password" placeholder="Password" ng-model='gusetpass' ng-init="guestpass='password'" type="hidden" class="validate">
-      </div>
+
+<form class="col s5" ng-submit='loginController.submit(guest, guestpass)'>
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="user_name" placeholder="User Name" ng-model='guest' ng-init="guest='guest'" type="hidden" class="validate">
     </div>
-    <button class="btn waves-effect blue" type="submit" name="action">Log in as guest
-    </button>
-  </form>
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="password" placeholder="Password" ng-model='gusetpass' ng-init="guestpass='password'" type="hidden" class="validate">
+    </div>
+  </div>
+  <button class="btn waves-effect blue" type="submit" name="action">Log in as guest
+  </button>
+</form>
 </div>

@@ -1,0 +1,22 @@
+{
+  "name": "video-view",
+  "version": "1.0.0",
+  "description": "### tech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apjames93/video-view.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apjames93/video-view/issues"
+  },
+  "homepage": "https://github.com/apjames93/video-view#readme",
+  "dependencies": {
+    "node-sass": "^3.10.0"
+  }
+}

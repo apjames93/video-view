@@ -1,20 +1,24 @@
-<iframe width="100%" height="100%" src={{video.youtube}} frameborder="0" allowfullscreen></iframe>
-<p>
-URL:  {{video.youtube}}
-</p>
+<div class="myvideos-box">
+  <iframe width="100%" height="100%" src={{video.youtube}} frameborder="0" allowfullscreen></iframe>
+  <p>
+  URL:  {{video.youtube}}
+  </p>
 
-<button class="btn waves-effect red" type="button" ng-click="delVideo(video.id)">delete</button>
 
-<button class="btn waves-effect waves-light" ng-click="showForm()">Send Video to a friend</button>
+  <button class="btn waves-effect red" type="button" ng-click="delVideo(video.id)">delete</button>
 
-<form ng-hide="hideForm" ng-submit='sendEmail(to, subject, video.youtube)'>
-  <label for="to">to:</label>
-  <input ng-model='to' type="text" class="validate">
+  <button class="btn waves-effect waves-light" ng-click="showForm()">Send Video to a friend</button>
 
-  <label for="subject">subject:</label>
-  <input ng-model='subject' type="text" class="validate">
+  <form ng-hide="hideForm" ng-submit='sendEmail(to, subject, video.youtube)'>
+    <label for="to">to:</label>
+    <input ng-model='to' type="text" class="validate">
 
-  <button class="btn waves-effect waves-light" type ='submit' name="button">Send Email</button>
+    <label for="subject">subject:</label>
+    <input ng-model='subject' type="text" class="validate">
 
-  <button class="btn waves-effect red"ng-click='nevermind()' type ='button' name="button">nevermind</button>
-</form>
+    <button class="btn waves-effect waves-light" type ='submit' name="button">Send Email</button>
+
+    <button class="btn waves-effect red"ng-click='nevermind()' type ='button' name="button">nevermind</button>
+  </form>
+
+</div>

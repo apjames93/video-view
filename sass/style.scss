@@ -1,0 +1,38 @@
+@import 'color';
+@import 'nav';
+@import 'emotion';
+@import 'home';
+@import 'login';
+
+
+
+body {
+    background-image: url("paper.gif");
+    background-repeat: repeat-y;
+}
+
+.iframe{
+  height: 450px;
+  width: 100%;
+}
+.reaction{
+  height: 400px;
+  width: 100px;
+}
+.myvideos-box{
+  margin-bottom: 15px;
+
+}
+.myvideos-box:hover{
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+body {
+  font-family: 'Lato';
+  background-color: #f0f0f0;
+  margin: 0px auto;
+  max-width: 1150px;
+}

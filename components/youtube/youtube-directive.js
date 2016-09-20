@@ -12,7 +12,7 @@
           youtube: '='
         },
         controller: youtubeController,
-        controllerAs: 'youtubeController'
+        controllerAs: 'youtubeController'  
       };
       return directive;
     }

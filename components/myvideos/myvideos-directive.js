@@ -1,6 +1,6 @@
 (function(){
   angular
-    .module('video.myvideos.myvideos-directive', [])
+    .module('video.myvideos.myvideos-directive', []) 
     .directive('myvideos', myvideos);
 
     function myvideos() {

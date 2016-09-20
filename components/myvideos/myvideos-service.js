@@ -1,5 +1,5 @@
 (function(){
-  angular
+  angular 
     .module('video.myvideos.myvideos-service', [])
     .service('myvideosService', myvideosService);
     myvideosService.$inject = ['$http', '$q', 'loginService', '$state'];

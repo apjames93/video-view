@@ -5,7 +5,8 @@
     </video>
     <canvas id="overlay" width="400" height="300"></canvas>
   </div>
-  <canvas id="sketch" width="400" height="300"></canvas>
+
+  <canvas id="sketch" class= "reaction"></canvas>
   <div id="emotion_container">
     <div id="emotion_icons">
       <img class="emotion_icon" id="icon1" src="clmtracker/examples/media/icon_angry.png">
@@ -18,4 +19,14 @@
   <div id="controls">
     <input class="btn" type="hidden" value="wait, loading video" disabled="disabled" ng-init="startVideo()" id="startbutton"></input>
   </div>
+</div>
+
+
+
+<div class="row">
+  <button id="take">Take a photo</button><br />
+<video style="display:none;" id="v"></video>
+<canvas id="canvas" style="display:none;"></canvas>
+<img src="http://placehold.it/300&text=Your%20image%20here%20..." id="photo" alt="photo">
+
 </div>
